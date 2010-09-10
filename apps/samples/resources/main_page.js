@@ -23,11 +23,12 @@ Samples.mainPage = SC.Page.design({
     sampleTab: SC.TabView.design({
   		layout: { top: 30, centerX: 0, width: 1024, bottom: 30 },
       classNames: ['sample-tabs'],
-      nowShowing: 'Samples.graphsPage.mainView', 
+      nowShowing: 'Samples.mapsPage.mainView', 
       items: [
         { title: "Introduction", value: 'Samples.introPage.mainView' },
         { title: "Shapes", value: 'Samples.shapesPage.mainView' },
-        { title: "Graphs", value: 'Samples.graphsPage.mainView' }
+        { title: "Graphs", value: 'Samples.graphsPage.mainView' },
+        { title: "Maps", value: 'Samples.mapsPage.mainView' }
       ],
       itemTitleKey: 'title',
       itemValueKey: 'value'
