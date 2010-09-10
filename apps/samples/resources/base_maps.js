@@ -51,11 +51,14 @@ Samples.baseMapsPage = SC.Page.design({
                       { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 1 },
                       { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 1 },
                       { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 1 }]
-      }
+      },
+
+      canvasAnchoredLabels: [{label: 'Points (circles) at Grid Nodes', anchor: 'top-left', xOffset: 25, yOffset: 15, width: 120, height: 15, 
+                             labelAttrs: {anchor: 'left', textAnchor: 'left', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
 
     nodePlusses: Sai.BaseMapView.design({
-      layout: { left: 325, top: 0, height: 300, width: 300 },
+      layout: { left: 350, top: 0, height: 300, width: 300 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 50, right: 50, bottom: 50},
 
@@ -94,7 +97,10 @@ Samples.baseMapsPage = SC.Page.design({
                       { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 1 },
                       { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 1 },
                       { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 1 }]
-      }
+      },
+
+      canvasAnchoredLabels: [{label: 'Plusses at Grid Nodes', anchor: 'top-left', xOffset: 25, yOffset: 15, width: 120, height: 15, 
+                             labelAttrs: {anchor: 'left', textAnchor: 'left', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
 
     hsb: Sai.BaseMapView.design({
