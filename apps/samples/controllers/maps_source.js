@@ -22,7 +22,7 @@ Samples.mapsSourceController = SC.ArrayController.create(
     
   refresh: function(){
     var root = [
-      SC.Object.create({ name: "HSB Colors Map", view: 'Samples.baseMapsPage.mainView'})
+      SC.Object.create({ name: "Base Maps", view: 'Samples.baseMapsPage.mainView'})
     ];
     
     this.set('content', root);

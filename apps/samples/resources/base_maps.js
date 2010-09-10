@@ -9,17 +9,103 @@ Samples.baseMapsPage = SC.Page.design({
   mainView: SC.View.design({
     classNames: ['basemap-sample'],
     layout: { top: 0, left: 0, right: 0, bottom: 0 },
-    childViews: 'hsb'.w(),
+    childViews: 'nodePoints nodePlusses hsb'.w(),
     
-    hsb: Sai.BaseMapView.design({
-      layout: { left: 25, top: 0, height: 300, width: 450 },
+    nodePoints: Sai.BaseMapView.design({
+      layout: { left: 25, top: 0, height: 300, width: 300 },
       backgroundColor: 'lightgray',
-      margins: {left: 100, top: 50, right: 40, bottom: 50},
-      grid: { cols: 6, rows: 9, 
+      margins: {left: 50, top: 50, right: 50, bottom: 50},
+
+      grid: { cols: 5, rows: 5, 
               showCellRects: NO, 
               showCellValues: NO, 
               showCellNodesAsPlusses: NO, 
               showCellNodesAsPoints: YES, 
+              showCellRectCornersAsPlusses: NO,
+              cells: [{ color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 5 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 5 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 5 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 5 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 5 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 4 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 4 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 4 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 4 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 4 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 3 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 3 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 3 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 3 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 3 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 2 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 2 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 2 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 2 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 2 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 1 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 1 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 1 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 1 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 1 }]
+      }
+    }),
+
+    nodePlusses: Sai.BaseMapView.design({
+      layout: { left: 325, top: 0, height: 300, width: 300 },
+      backgroundColor: 'lightgray',
+      margins: {left: 50, top: 50, right: 50, bottom: 50},
+
+      grid: { cols: 5, rows: 5, 
+              showCellRects: NO, 
+              showCellValues: NO, 
+              showCellNodesAsPlusses: YES, 
+              showCellNodesAsPoints: NO, 
+              showCellRectCornersAsPlusses: NO,
+              cells: [{ color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 5 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 5 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 5 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 5 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 5 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 4 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 4 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 4 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 4 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 4 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 3 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 3 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 3 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 3 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 3 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 2 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 2 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 2 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 2 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 2 },
+      
+                      { color: { fill: 'hsb(360, 1, .5)', stroke: 'white'}, value: 360, col: 1, row: 1 },
+                      { color: { fill: 'hsb(300, 1, .5)', stroke: 'white'}, value: 300, col: 2, row: 1 },
+                      { color: { fill: 'hsb(240, 1, .5)', stroke: 'white'}, value: 240, col: 3, row: 1 },
+                      { color: { fill: 'hsb(180, 1, .5)', stroke: 'white'}, value: 180, col: 4, row: 1 },
+                      { color: { fill: 'hsb(120, 1, .5)', stroke: 'white'}, value: 120, col: 5, row: 1 }]
+      }
+    }),
+
+    hsb: Sai.BaseMapView.design({
+      layout: { left: 25, top: 325, height: 300, width: 450 },
+      backgroundColor: 'lightgray',
+      margins: {left: 100, top: 50, right: 40, bottom: 50},
+      grid: { cols: 6, rows: 9, 
+              showCellRects: YES, 
+              showCellValues: NO, 
+              showCellNodesAsPlusses: NO, 
+              showCellNodesAsPoints: NO, 
               showCellRectCornersAsPlusses: NO,
               cells: [{ color: { fill: 'hsb(360,   1, .75)',  stroke: 'white'}, value: 360, col: 1, row: 9 },
                       { color: { fill: 'hsb(300,   1, .5)',   stroke: 'white'}, value: 300, col: 2, row: 9 },
@@ -82,7 +168,8 @@ Samples.baseMapsPage = SC.Page.design({
                       { color: { fill: 'hsb(240, 0, .25)',    stroke: 'white'}, value: 240, col: 3, row: 1 },
                       { color: { fill: 'hsb(180, 0, 0)',      stroke: 'white'}, value: 180, col: 4, row: 1 },
                       { color: { fill: 'hsb(120, 0, .25)',    stroke: 'white'}, value: 120, col: 5, row: 1 },
-                      { color: { fill: 'hsb( 60, 0, .5)',     stroke: 'white'}, value:  60, col: 6, row: 1 }]},
+                      { color: { fill: 'hsb( 60, 0, .5)',     stroke: 'white'}, value:  60, col: 6, row: 1 }]
+      },
 
       leftAxis: {color: 'black', labelAttrs: {fontSize: '9'}, labels: ['0', '.125', '.25', '.375', '.5', '.625', '.75', '.875', '1']},
       topAxis: {color: 'black', labelAttrs: {fontSize: '9'}, labels: ['.75', '.5', '.25', '0', '.25', '.5']},

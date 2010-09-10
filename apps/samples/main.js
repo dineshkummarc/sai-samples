@@ -22,6 +22,7 @@ Samples.main = function main() {
   // Step 2. Fill the types of basic shapes
   Samples.basicSourceController.refresh();
   Samples.graphsSourceController.refresh();
+  Samples.mapsSourceController.refresh();
 
 } ;
 
