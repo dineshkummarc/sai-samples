@@ -9,7 +9,7 @@ Samples.baseMapsPage = SC.Page.design({
   mainView: SC.View.design({
     classNames: ['basemap-sample'],
     layout: { top: 0, left: 0, right: 0, bottom: 0 },
-    childViews: 'nodePoints nodePlusses hsb'.w(),
+    childViews: 'nodePoints nodePlusses'.w(),
     
     nodePoints: Sai.BaseMapView.design({
       layout: { left: 25, top: 0, height: 300, width: 300 },

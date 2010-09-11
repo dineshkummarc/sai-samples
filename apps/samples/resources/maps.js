@@ -22,7 +22,8 @@ Samples.mapsPage = SC.Page.design({
     
     detail: SC.SceneView.design({
       layout: {top: 10, left: 160, right: 10, bottom: 10},
-      scenes: ['Samples.baseMapsPage.mainView'],
+      scenes: ['Samples.baseMapsPage.mainView',
+               'Samples.hsbMapsPage.mainView'],
       nowShowing: 'Samples.baseMapsPage.mainView'
     })
   })  
