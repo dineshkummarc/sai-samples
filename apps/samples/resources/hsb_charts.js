@@ -1,17 +1,17 @@
 // ==========================================================================
-// Project:   Sai Samples - hsbMapsPage
+// Project:   Sai Samples - hsbChartsPage
 // Copyright: ©2010 Evin Grano and Contributors
 // ==========================================================================
 /*globals Samples Sai*/
 
-Samples.hsbMapsPage = SC.Page.design({
+Samples.hsbChartsPage = SC.Page.design({
   
   mainView: SC.View.design({
-    classNames: ['basemap-sample'],
+    classNames: ['basechart-sample'],
     layout: { top: 0, left: 0, right: 0, bottom: 0 },
     childViews: 'hsb1 hsb2 hsb3 hsb4 hsb5 hsb6'.w(),
     
-    hsb1: Sai.BaseMapView.design({
+    hsb1: Sai.BaseChartView.design({
       layout: { left: 25, top: 0, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},
@@ -119,7 +119,7 @@ Samples.hsbMapsPage = SC.Page.design({
                              labelAttrs: {anchor: 'center', textAnchor: 'center', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
     
-    hsb2: Sai.BaseMapView.design({
+    hsb2: Sai.BaseChartView.design({
       layout: { left: 425, top: 0, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},
@@ -227,7 +227,7 @@ Samples.hsbMapsPage = SC.Page.design({
                              labelAttrs: {anchor: 'center', textAnchor: 'center', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
     
-    hsb3: Sai.BaseMapView.design({
+    hsb3: Sai.BaseChartView.design({
       layout: { left: 25, top: 300, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},
@@ -335,7 +335,7 @@ Samples.hsbMapsPage = SC.Page.design({
                              labelAttrs: {anchor: 'center', textAnchor: 'center', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
     
-    hsb4: Sai.BaseMapView.design({
+    hsb4: Sai.BaseChartView.design({
       layout: { left: 425, top: 300, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},
@@ -443,7 +443,7 @@ Samples.hsbMapsPage = SC.Page.design({
                              labelAttrs: {anchor: 'center', textAnchor: 'center', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
     
-    hsb5: Sai.BaseMapView.design({
+    hsb5: Sai.BaseChartView.design({
       layout: { left: 25, top: 600, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},
@@ -551,7 +551,7 @@ Samples.hsbMapsPage = SC.Page.design({
                              labelAttrs: {anchor: 'center', textAnchor: 'center', fontSize: '12', fill: 'black', stroke: 'black'}}]
     }),
     
-    hsb6: Sai.BaseMapView.design({
+    hsb6: Sai.BaseChartView.design({
       layout: { left: 425, top: 600, height: 300, width: 400 },
       backgroundColor: 'lightgray',
       margins: {left: 50, top: 75, right: 40, bottom: 40},

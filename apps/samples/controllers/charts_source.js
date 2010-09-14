@@ -1,18 +1,18 @@
 // ==========================================================================
-// Samples.mapSourceController
+// Samples.chartSourceController
 // ==========================================================================
 /*globals Samples */
 /** @static
 
-  This ArrayController that serves up the SourceList to the Map Library
+  This ArrayController that serves up the SourceList to the Chart Library
   
   @extends SC.ArrayController
   @author Jeff Pittman
 
 */
 
-Samples.mapsSourceController = SC.ArrayController.create(
-/** @scope Samples.mapsSourceController.prototype */ {
+Samples.chartsSourceController = SC.ArrayController.create(
+/** @scope Samples.chartsSourceController.prototype */ {
 
   /**
     Expecting a tree structure
@@ -22,17 +22,17 @@ Samples.mapsSourceController = SC.ArrayController.create(
     
   refresh: function(){
     var root = [
-      SC.Object.create({ name: "Base Maps", view: 'Samples.baseMapsPage.mainView'})
+      SC.Object.create({ name: "HSB Charts", view: 'Samples.hsbChartsPage.mainView'})
     ];
     
     this.set('content', root);
     this.set('selection', SC.SelectionSet.create().addObject(root[0]) );
   },
   
-  mapSelected: function(){
+  chartSelected: function(){
     var sel = this.getPath('selection.firstObject');
     if (sel) {
-      var scene = Samples.mapsPage.getPath('mainView.detail');
+      var scene = Samples.chartsPage.getPath('mainView.detail');
       var view = sel.get('view');
       scene.set('nowShowing', view);
     } 
