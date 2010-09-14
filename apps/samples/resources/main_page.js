@@ -28,6 +28,7 @@ Samples.mainPage = SC.Page.design({
         { title: "Introduction", value: 'Samples.introPage.mainView' },
         { title: "Shapes", value: 'Samples.shapesPage.mainView' },
         { title: "Graphs", value: 'Samples.graphsPage.mainView' },
+        { title: "Charts", value: 'Samples.chartsPage.mainView' },
         { title: "Maps", value: 'Samples.mapsPage.mainView' }
       ],
       itemTitleKey: 'title',
