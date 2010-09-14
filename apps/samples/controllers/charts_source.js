@@ -22,6 +22,7 @@ Samples.chartsSourceController = SC.ArrayController.create(
     
   refresh: function(){
     var root = [
+      SC.Object.create({ name: "Base Charts", view: 'Samples.baseChartsPage.mainView'}),
       SC.Object.create({ name: "HSB Charts", view: 'Samples.hsbChartsPage.mainView'})
     ];
     
